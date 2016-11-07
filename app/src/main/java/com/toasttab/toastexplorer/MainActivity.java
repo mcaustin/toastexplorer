@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -32,6 +33,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void renderRoom(Room room) {
         TextView txtRoomName = (TextView)findViewById(R.id.txtRoomName);
         txtRoomName.setText(room.getName());
+
+        ImageView imageView = (ImageView)findViewById(R.id.imgRoom);
+        int resID = getResources().getIdentifier(room.getImageKey(), "drawable", getPackageName());
+        if (resID != 0) {
+            imageView.setImageDrawable(getResources().getDrawable(resID));
+        }
+
         LinearLayout routeContainer = (LinearLayout)findViewById(R.id.routeContainer);
         routeContainer.removeAllViews();
 

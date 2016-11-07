@@ -7,20 +7,17 @@ import java.util.Set;
 
 public class Room {
 
-    private String imagePath;
+    private String imageKey;
     private String name;
     private Integer id;
     private HashSet<Route> routes;
 
-    public Room (String imagePath, String name) {
-        this.imagePath = imagePath;
+    public Room (String imageKey, String name) {
+        this.imageKey = imageKey;
         this.name = name;
         this.routes = new HashSet<>();
     }
 
-    public String getImagePath() {
-        return this.imagePath;
-    }
 
     public String getName() {
         return this.name;
@@ -40,6 +37,10 @@ public class Room {
 
     public Set<Route> getRoutes() {
         return routes;
+    }
+
+    public String getImageKey() {
+        return imageKey;
     }
 
 }

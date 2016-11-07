@@ -44,8 +44,10 @@ public class World {
         System.out.println("name=" + name);
         Integer id = Integer.parseInt(xmlResourceParser.getAttributeValue(null, "id"));
         System.out.println("id=" + id);
+        String imageKey = xmlResourceParser.getAttributeValue(null, "image");
+        System.out.println("image=" + imageKey);
 
-        Room room = new Room("imagePath", name);
+        Room room = new Room(imageKey, name);
         room.setId(id);
 
         try {

@@ -24,6 +24,13 @@
         android:text="Room Name"
         android:id="@+id/txtRoomName"/>
 
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/imgRoom"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

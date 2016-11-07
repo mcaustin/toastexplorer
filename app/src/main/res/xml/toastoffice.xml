@@ -1,0 +1,8 @@
+<world name="Toast Office">
+    <mainroom name="Lobby" id="1">
+        <route text="Go To Kitchen" id="2"/>
+    </mainroom>
+    <room name="Kitchen" id="2">
+        <route text="Go To Lobby" id="1"/>
+    </room>
+</world>
